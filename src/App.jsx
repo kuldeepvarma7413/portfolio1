@@ -10,8 +10,16 @@ import stone2 from "./assets/stone2.png";
 import stone3 from "./assets/stone3.png";
 import medicWorld from "./assets/medic_world.png";
 import studysync from "./assets/studysync.png";
+import projectManager from "./assets/project_manager.png";
 import ServiceCard from "./components/ServiceCard";
 import ProjectCard from "./components/ProjectCard";
+import StudySyncAndroid from "./assets/studysync_android.png";
+import BMICalculator from "./assets/bmi_calculator.png";
+import HireMe from "./assets/hire_me-min.webp";
+import fullStack from "./assets/full_stack.jpg";
+import android from "./assets/android.webp";
+import api from "./assets/api.png";
+import logo from "./assets/logo.png";
 import { IoMailOpen } from "react-icons/io5";
 import { SiGooglegemini } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
@@ -57,7 +65,7 @@ function App() {
           Service
         </Link>
         <div className="logo">
-          <span>Logo</span>
+          <img src={logo} alt="logo" style={{ width: "45px" }} />
           <p className="logo-text">PORTFOLIO</p>
         </div>
         <Link activeClass="active" smooth spy to="resume">
@@ -111,7 +119,9 @@ function App() {
             <NavLink to={"#"} className={"selected"}>
               Portfolio
             </NavLink>
-            <NavLink to={"#"}>Contact</NavLink>
+            <Link activeClass="active" smooth spy to="contact">
+              Contact
+            </Link>
           </div>
         </section>
       </div>
@@ -132,9 +142,9 @@ function App() {
           </p>
         </div>
         <div className="services">
-          <ServiceCard title="Full Stack Development" image={studysync} />
-          <ServiceCard title="Mobile App Development" image={background} />
-          <ServiceCard title="API development" image={background} />
+          <ServiceCard title="Full Stack Development" image={fullStack} />
+          <ServiceCard title="Mobile App Development" image={android} />
+          <ServiceCard title="API development" image={api} />
         </div>
       </div>
       {/* work experience */}
@@ -145,16 +155,16 @@ function App() {
           </h2>
           <div className="exp-details">
             <div className="companies">
-              <div className="company">
+              <div className="company school">
                 <h2>EVE Health Centers, Gurgaon</h2>
                 <p>Jun 2023- August 2023</p>
               </div>
-            </div>
-            <div className="dotes">
-              <span className="dot red-dot"></span>
-            </div>
-            <div className="roles">
-              <div className="role">
+              <div className="dots">
+                <span className="dot-outer">
+                  <p className="dot red"></p>
+                </span>
+              </div>
+              <div className="role stream">
                 <h2>Front-end Intern</h2>
                 <p>
                   Designed user-friendly interfaces, resolved bugs, and
@@ -170,7 +180,7 @@ function App() {
       <div className="why-hire">
         <div className="hire-left">
           <div className="back-cont">
-            <img src="" alt="" />
+            <img src={HireMe} alt="" />
           </div>
         </div>
         <div className="hire-right">
@@ -219,21 +229,28 @@ function App() {
             githubLink="https://github.com/kuldeepvarma7413/StudySync-MERN"
           />
           <ProjectCard
+            title="Project Manager"
+            description="The Pharmacy Management is a project developed to enhance the efficiency, accuracy, and security of pharmacy operations. It features user roles for administrators and chemists, facilitating tasks like adding and managing medicines, generating bills, and maintaining user profiles using Java and Swing components."
+            image={projectManager}
+            githubLink={"https://github.com/kuldeepvarma7413/project_manager"}
+          />
+          <ProjectCard
             title="Medic World"
             description="The Pharmacy Management is a project developed to enhance the efficiency, accuracy, and security of pharmacy operations. It features user roles for administrators and chemists, facilitating tasks like adding and managing medicines, generating bills, and maintaining user profiles using Java and Swing components."
             image={medicWorld}
             githubLink="https://github.com/kuldeepvarma7413/Medic-World-Application-JAVA"
           />
           <ProjectCard
-            title="Medic World"
-            description="The Pharmacy Management is a project developed to enhance the efficiency, accuracy, and security of pharmacy operations. It features user roles for administrators and chemists, facilitating tasks like adding and managing medicines, generating bills, and maintaining user profiles using Java and Swing components."
-            image={medicWorld}
-          />
-          <ProjectCard
             title="BMI Calculator"
             description="Developed a user-friendly BMI calculator to help users easily determine their Body Mass Index based on weight and height inputs."
-            image={studysync}
+            image={BMICalculator}
             githubLink="https://github.com/kuldeepvarma7413/BMI-Calculator"
+          />
+          <ProjectCard
+            title="StudySync Android App"
+            description="Developed StudySync, an Android app for enhanced notes management, featuring real-time collaboration, note sharing, and user-friendly interface to streamline study sessions."
+            image={StudySyncAndroid}
+            githubLink="https://github.com/kuldeepvarma7413/StudySync_Android"
           />
         </div>
       </div>
@@ -262,38 +279,44 @@ function App() {
                 <h2>Lovely Professional University</h2>
                 <p>Jalandhar, Punjab | Aug 2021 - May 2025</p>
               </div>
+              <div className="dots">
+                <span className="dot-outer">
+                  <p className="dot red"></p>
+                </span>
+              </div>
+              <div className="role stream">
+                <h2>B.Tech. CSE</h2>
+                <p>Specialization: Full Stack, Android | CGPA: 8.12</p>
+              </div>
+            </div>
+            <div className="companies">
               <div className="company school">
                 <h2>G.B.S. School, Jaswantpura</h2>
                 <p>Churu, Rajasthan | Jul 2019 - May 2020</p>
               </div>
+              <div className="dots">
+                <span className="dot-outer">
+                  <p className="dot d-blue"></p>
+                </span>
+              </div>
+              <div className="role stream">
+                <h2>12th (Science)</h2>
+                <p>Specialization: Physics, Chemistry, Maths | Result: 71%</p>
+              </div>
+            </div>
+            <div className="companies">
               <div className="company school">
                 <h2>G.B.S. School, Jaswantpura</h2>
                 <p>Churu, Rajasthan | Jul 2017 - May 2018</p>
               </div>
-            </div>
-            <div className="dotes">
-              <span className="dot red-dot"></span>
-              <span className="dot red-dot"></span>
-              <span className="dot red-dot"></span>
-            </div>
-            <div className="roles">
-              <div className="role stream">
-                <h2>B.Tech. CSE</h2>
-                <p>
-                  Specialization: Full Stack, Android | CGPA: 8.12
-                </p>
-              </div>
-              <div className="role stream">
-                <h2>12th (Science)</h2>
-                <p>
-                  Specialization: Physics, Chemistry, Maths | Result: 71%
-                </p>
+              <div className="dots">
+                <span className="dot-outer">
+                  <p className="dot red"></p>
+                </span>
               </div>
               <div className="role stream">
                 <h2>10th (Science)</h2>
-                <p>
-                  Result: 80.67%
-                </p>
+                <p>Result: 80.67%</p>
               </div>
             </div>
           </div>
@@ -305,17 +328,49 @@ function App() {
           Have an Awesome Project Idea?{" "}
           <span className="d-orange">Let's Discuss</span>
         </h2>
-        <div className="connect-input">
+        <form
+          action="https://public.herotofu.com/v1/ca1a0aa0-47e2-11ef-9c40-81ddfd46a512"
+          method="post"
+          acceptCharset="UTF-8"
+          className="connect-input"
+        >
           <IoMailOpen className="mail-icon" />
-          <input type="email" placeholder="Enter your email" />
-          <button>Send</button>
-        </div>
+          <input
+            name="Email"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <input
+            name="Name"
+            id="name"
+            type="text"
+            value={"portfolio"}
+            style={{ width: "0px", padding: "0px" }}
+            required
+          />
+          <button type="submit">Send</button>
+
+          <div className="extra">
+            <input type="submit" value="Download CTA" />
+            <div aria-hidden="true">
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex="-1"
+                autoComplete="off"
+              />
+            </div>
+          </div>
+        </form>
       </div>
       {/* footer */}
       <footer>
         <div className="top">
           <h2>Let's Connect there</h2>
-          <button>Connect</button>
+          <a href="https://www.linkedin.com/in/kul-deep-varma-4150bb225/">
+            Connect
+          </a>
         </div>
         <p className="line"></p>
         {/* details */}
@@ -328,16 +383,16 @@ function App() {
               B.Tech in Computer Science at Lovely Professional University.
             </p>
             <div className="social-links">
-              <a href="">
+              <a href="https://www.linkedin.com/in/kul-deep-varma-4150bb225/">
                 <BsLinkedin className="icon" />
               </a>
-              <a href="">
+              <a href="https://github.com/kuldeepvarma7413">
                 <FaSquareGithub className="icon" />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/kuldeepvarma7413">
                 <RiInstagramFill className="icon" />
               </a>
-              <a href="">
+              <a href="https://leetcode.com/u/kuldeepvarma7413/">
                 <SiLeetcode className="icon" />
               </a>
             </div>
@@ -362,9 +417,13 @@ function App() {
           </div>
           <div className="contact">
             <h2>Contact</h2>
-            <p>+91 7413912366</p>
-            <p>kuldeepvarma7413@gmail.com</p>
-            <p>kuldeepvarma7413.netlify.app</p>
+            <a href="tel:+917413912366">+91 7413912366</a>
+            <a href="mailto:kuldeepvarma7413@gmail.com">
+              kuldeepvarma7413@gmail.com
+            </a>
+            <a href="https://kuldeepvarma.netlify.app">
+              kuldeepvarma.netlify.app
+            </a>
           </div>
         </div>
       </footer>

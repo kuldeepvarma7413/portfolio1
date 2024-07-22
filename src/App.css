@@ -215,7 +215,7 @@ header .logo span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 700px;
+  height: fit-content;
   position: relative;
   border-radius: 50px;
   padding: 0px 100px;
@@ -232,19 +232,20 @@ header .logo span {
   z-index: -1;
 }
 
-.service .top-content{
+.service .top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   margin-top: 80px;
+  z-index: 9;
 }
 
-.service .top-content h2{
+.service .top-content h2 {
   font-size: 3rem;
 }
 
-.service .top-content p{
+.service .top-content p {
   width: 40%;
 }
 
@@ -252,126 +253,208 @@ header .logo span {
   position: absolute;
 }
 
-.stone1{
+.stone1 {
   left: -50px;
+  animation: move1 10s linear infinite;
+}
+.stone3 {
+  animation: move3 10s linear infinite;
 }
 
-.stone3{
+.stone2 {
+  animation: move2 20s linear infinite;
+}
+
+@keyframes move1 {
+  0% {
+    left: -50px;
+    top: -50px;
+  }
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+  75% {
+    left: 0px;
+    top: -20px;
+  }
+  100% {
+    left: -50px;
+    top: -50px;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    right: 50%;
+    top: -50px;
+  }
+  25% {
+    right: 60%;
+    top: 0px;
+  }
+  50% {
+    right: 50%;
+    top: 0px;
+  }
+  75% {
+    right: 40%;
+    top: -20px;
+  }
+  100% {
+    right: 50%;
+    top: -50px;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    right: -50px;
+    bottom: -50px;
+  }
+  50% {
+    right: 0px;
+    bottom: 0px;
+  }
+  75% {
+    right: 0px;
+    bottom: -20px;
+  }
+  100% {
+    right: -50px;
+    bottom: -50px;
+  }
+}
+
+.stone3 {
   right: -50px;
   bottom: -50px;
   width: 400px;
 }
 
-.service .services{
+.service .services {
   width: 100%;
-  padding: 80px;
+  padding: 80px 0;
   z-index: 10;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 /* experience */
-.experience .content{
+.experience .content {
   margin: 30px 100px;
   margin-top: 60px;
 }
 
-.experience .content h2{
+.experience .content h2 {
   color: #344054;
   font-size: 3rem;
   text-align: center;
 }
 
 /* exp details */
-.exp-details{
+.exp-details {
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
   color: #344054;
 }
 
-.companies, .roles{
-  width: 35%;
+.companies {
+  display: flex;
 }
 
-.dotes{
+.company,
+.role {
+  width: 40%;
+}
+
+.dots {
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.companies .company, .roles .role, .dotes .dot{
+.companies .company,
+.companies .role,
+.dotes .dot {
   margin: 30px 0px;
 }
 
-.companies .company h2{
-  font-size: 1.5rem ;
+.companies .company h2 {
+  font-size: 1.5rem;
   text-align: start;
   margin-bottom: 10px;
+  width: 40%;
 }
 
-.companies .company p{
+.companies .company p {
   font-size: 1rem;
   color: gray;
 }
 
-.roles .role h2{
-  font-size: 1.5rem ;
+.companies .role h2 {
+  font-size: 1.5rem;
   text-align: end;
   margin-bottom: 10px;
 }
 
-.roles .role p{
+.companies .role p {
   font-size: 1rem;
   color: gray;
   text-align: justify;
   width: fit-content;
 }
 
-.dotes{
+.dotes {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dot-outer {
+  width: 30px;
+  height: 30px;
+  padding: 2.5px;
+  border-radius: 50%;
+  border: 2px dotted #344054;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dot{
-  width: 20px;
-  height: 20px;
+.dot-outer .dot {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  position: relative;
-  padding: 5px;
 }
 
-.red-dot{
+.red {
   background-color: darkorange;
 }
 
-.dot::after{
-  content: "";
-  border: dotted 2px #344054;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-31%, -34%);
+.d-blue {
+  background-color: #344054;
 }
 
 /* why hire */
-.why-hire{
+.why-hire {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 600px;
-  background-color: #F2F4F7;
+  height: fit-content;
+  background-color: #f2f4f7;
   position: relative;
   margin-top: 80px;
   border-radius: 50px;
-  padding: 0px 100px;
+  padding: 40px 100px;
   overflow: hidden;
 }
 
-.hire-left, .hire-right{
+.hire-left,
+.hire-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -380,46 +463,56 @@ header .logo span {
   height: 100%;
 }
 
-.hire-right{
+.hire-right {
   width: 55%;
   align-items: start;
 }
 
-.back-cont{
+.back-cont {
   background-color: rgb(254, 185, 100);
   width: 300px;
   height: 350px;
   border-radius: 50px;
+  position: relative;
 }
 
-.hire-right h2{
+.back-cont img {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  bottom: 0;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.hire-right h2 {
   font-size: 3rem;
   margin-top: 50px;
   margin-bottom: 30px;
   color: #344054;
 }
 
-.hire-right li{
+.hire-right li {
   font-size: 1rem;
   color: gray;
   width: 70%;
   margin-bottom: 30px;
 }
 
-.hire-me-btn{
+.hire-me-btn {
   padding: 10px 20px;
   border-radius: 1.5rem;
   background-color: #c9c9c9;
   font-size: 1rem;
 }
 
-.hire-me-btn:hover{
+.hire-me-btn:hover {
   background-color: darkorange;
   color: white;
 }
 
 /* projects */
-.projects{
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -431,7 +524,7 @@ header .logo span {
   margin-top: 80px;
 }
 
-.projects .top{
+.projects .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -440,11 +533,11 @@ header .logo span {
   color: #344054;
 }
 
-.projects .top h2{
+.projects .top h2 {
   font-size: 3rem;
 }
 
-.projects .top button{
+.projects .top button {
   padding: 10px 20px;
   border-radius: 1.5rem;
   background-color: darkorange;
@@ -452,7 +545,7 @@ header .logo span {
   color: white;
 }
 
-.all-project{
+.all-project {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -463,12 +556,12 @@ header .logo span {
 
 /* connect */
 
-.connect{
+.connect {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
   position: relative;
   margin-top: 80px;
   border-radius: 50px;
@@ -476,7 +569,7 @@ header .logo span {
   overflow: hidden;
 }
 
-.connect h2{
+.connect h2 {
   font-size: 3rem;
   margin-top: 80px;
   margin-bottom: 30px;
@@ -485,7 +578,7 @@ header .logo span {
   text-align: center;
 }
 
-.connect-input{
+.connect-input {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -498,9 +591,9 @@ header .logo span {
   margin-bottom: 80px;
 }
 
-.connect-input .mail-icon{
+.connect-input .mail-icon {
   padding: 10px;
-  background-color: #FFEAD5;
+  background-color: #ffead5;
   border-radius: 50%;
   color: darkorange;
   font-size: 2rem;
@@ -508,7 +601,7 @@ header .logo span {
   height: fit-content;
 }
 
-.connect-input input{
+.connect-input input {
   width: 100%;
   padding: 10px;
   border: none;
@@ -518,7 +611,7 @@ header .logo span {
   color: black;
 }
 
-.connect-input button{
+.connect-input button {
   padding: 10px 20px;
   border-radius: 1.5rem;
   background-color: darkorange;
@@ -528,8 +621,8 @@ header .logo span {
 
 /* moving label */
 
-.moving-label{
-  background-color: #FB6514;
+.moving-label {
+  background-color: #fb6514;
   height: 100px;
   width: 100%;
   position: relative;
@@ -538,7 +631,11 @@ header .logo span {
   margin-top: 50px;
 }
 
-.moving-label label{
+.moving-label label {
+  width: 200%;
+}
+
+.moving-label label {
   background-color: white;
   padding: 10px 20px;
   display: flex;
@@ -548,47 +645,56 @@ header .logo span {
   transform: rotate(-5.7deg);
   position: absolute;
   top: 30%;
-  width: 100%;
-  animation: moveltor 15s linear infinite;
+  animation: moveltor 30s linear infinite;
   font-weight: bold;
 }
 
-.gemini{
+.gemini {
   color: darkorange;
   font-size: 1.5rem;
 }
 
-.moving-label .label2{
-  animation-delay: 7.5s;
+.moving-label .label2 {
+  animation-delay: 15s;
 }
 
 @keyframes moveltor {
   0% {
-    left: -100%;
+    left: -200%;
   }
   100% {
-    left: 100%;
+    left: 200%;
   }
 }
 
 /* Education */
 
-.roles .role.stream{
+.companies .role.stream {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 
+/* connect */
+
+form .extra {
+  display: none;
+}
+
 /* footer */
 
-footer{
+footer {
   background-color: #272727;
   border-radius: 24px 24px 0 0;
   padding: 50px 100px;
   font-size: small;
 }
 
-footer .top{
+footer a {
+  color: white;
+}
+
+footer .top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -596,19 +702,20 @@ footer .top{
   color: white;
 }
 
-footer .top h2{
+footer .top h2 {
   font-size: 3rem;
 }
 
-footer .top button{
+footer .top a {
   padding: 10px 20px;
   border-radius: 1.5rem;
   background-color: darkorange;
   font-size: 1rem;
   color: white;
+  font-weight: bold;
 }
 
-footer .line{
+footer .line {
   margin: auto;
   height: 1px;
   width: -webkit-fill-available;
@@ -616,7 +723,7 @@ footer .line{
   margin: 80px 0px 30px;
 }
 
-footer .details{
+footer .details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -625,12 +732,12 @@ footer .details{
   padding-top: 20px;
 }
 
-footer .details h2{
-  color: #FB6514;
+footer .details h2 {
+  color: #fb6514;
   margin-bottom: 10px;
 }
 
-.details .social{
+.details .social {
   width: 40%;
   line-height: 1.5;
   display: flex;
@@ -638,23 +745,505 @@ footer .details h2{
   gap: 20px;
 }
 
-.social-links{
+.social-links {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.details .social a{
+.details .social a {
   color: white;
   font-size: 1.25rem;
 }
 
-footer .navs, footer .contact{
+footer .navs,
+footer .contact {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-footer .navs a{
+footer .navs a {
   color: white;
+}
+
+/* responsive */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .intro-about .quote {
+    width: 30%;
+  }
+
+  .intro-about .experience {
+    width: 30%;
+  }
+
+  .intro-about .experience .star {
+    width: 30px;
+    height: 30px;
+  }
+
+  .image-area .photo {
+    width: 400px;
+    height: 400px;
+  }
+
+  .image-area .CV-links a {
+    padding: 15px 25px;
+  }
+
+  .projects .top h2 {
+    font-size: 2.5rem;
+  }
+
+  .projects .top button {
+    padding: 10px 15px;
+  }
+
+  .connect h2 {
+    font-size: 2.5rem;
+  }
+
+  .connect-input {
+    width: 50%;
+  }
+
+  .connect-input .mail-icon {
+    padding: 15px;
+  }
+
+  .connect-input input {
+    padding: 15px;
+  }
+
+  .connect-input button {
+    padding: 15px 25px;
+  }
+
+  .moving-label label {
+    padding: 15px 25px;
+  }
+
+  .footer .top h2 {
+    font-size: 2.5rem;
+  }
+
+  .footer .top a {
+    padding: 15px 25px;
+  }
+
+  .footer .details h2 {
+    font-size: 2.5rem;
+  }
+
+  .details .social a {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding: 5px 20px;
+  }
+  header a {
+    padding: 10px 5px;
+    font-size: 0.75rem;
+  }
+  .intro-about {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-about .quote {
+    width: 80%;
+  }
+
+  .intro-about .experience {
+    width: 80%;
+  }
+
+  .intro-about .experience .star {
+    width: 20px;
+    height: 20px;
+  }
+  .service {
+    padding: 50px;
+  }
+
+  .service .services {
+    padding: 50px 0;
+  }
+
+  .service .top-content {
+    margin-top: 0;
+  }
+
+  .service .top-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .service .top-content p {
+    font-size: 0.75rem;
+  }
+
+  .image-area .photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-area .CV-links a {
+    padding: 10px 20px;
+  }
+
+  .experience .content {
+    margin: 30px 50px;
+    margin-top: 55px;
+  }
+
+  .hire-right {
+    padding-left: 35px;
+  }
+
+  .hire-right li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .hire-right h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+  }
+
+  .projects,
+  .why-hire {
+    padding: 50px;
+    padding-top: 80px;
+  }
+
+  .projects .top h2 {
+    font-size: 2rem;
+  }
+
+  .projects .top button {
+    padding: 10px 15px;
+  }
+
+  .connect h2 {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  .connect-input {
+    width: 70%;
+    margin-bottom: 60px;
+  }
+
+  .connect-input .mail-icon {
+    padding: 10px;
+  }
+
+  .connect-input input {
+    padding: 10px;
+  }
+
+  .connect-input button {
+    padding: 10px 20px;
+  }
+
+  .moving-label label {
+    padding: 10px 20px;
+  }
+
+  footer {
+    padding: 50px;
+  }
+
+  .footer .top h2 {
+    font-size: 2rem;
+  }
+
+  .footer .top a {
+    padding: 10px 20px;
+  }
+
+  .footer .details h2 {
+    font-size: 2rem;
+  }
+
+  .details .social a {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 767px) {
+  header {
+    padding: 5px 10px;
+  }
+  header a {
+    padding: 5px;
+    font-size: 0.55rem;
+  }
+
+  header .logo {
+    width: 50px;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .logo .logo-text {
+    font-size: 0.75rem;
+  }
+  .details .greet {
+    font-size: 1.5rem;
+  }
+
+  .details h1 {
+    font-size: 2.5rem;
+  }
+  .details .greet img {
+    width: 19px;
+    top: -13px;
+    right: -20px;
+  }
+  .details .data img {
+    width: 41px;
+    bottom: -27px;
+    left: -34px;
+  }
+
+  .image-area::before {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+  }
+
+  .intro {
+    height: 550px;
+  }
+
+  .intro-about {
+    margin-top: 4rem;
+  }
+
+  .intro-about .quote {
+    width: 100%;
+  }
+
+  .intro-about .experience {
+    width: 100%;
+  }
+
+  .intro-about .experience .star {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .service img.background {
+    border-radius: 24px;
+  }
+
+  .service .top-content {
+    margin-top: 0;
+  }
+
+  .service .top-content h2 {
+    font-size: 2rem;
+  }
+
+  .service .top-content p {
+    font-size: 0.55rem;
+  }
+  .service .services {
+    padding: 20px 0;
+  }
+
+  .stone2 {
+    width: 100px;
+  }
+
+  .stone1,
+  .stone3 {
+    width: 150px;
+  }
+
+  .image-area .photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-area .CV-links a {
+    padding: 10px 20px;
+  }
+
+  .experience .content {
+    margin: 30px 50px;
+    margin-top: 55px;
+  }
+
+  .experience .content h2 {
+    font-size: 2rem;
+  }
+
+  .exp-details {
+    margin-top: 10px;
+  }
+
+  .dot-outer {
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    border-width: 1px;
+  }
+
+  .why-hire {
+    margin-top: 50px;
+  }
+
+  .exp-details .companies .company h2,
+  .exp-details .companies .role h2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .companies .company p,
+  .companies .role p {
+    font-size: 0.5rem;
+  }
+
+  .companies .company,
+  .companies .role,
+  .dotes .dot {
+    margin: 10px 0px;
+  }
+
+  .hire-right {
+    padding-left: 35px;
+  }
+
+  .hire-right li {
+    font-size: 0.65rem;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .hire-right h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .hire-me-btn {
+    padding: 6px 10px;
+    border-radius: 1rem;
+    font-size: 0.55rem;
+  }
+
+  .projects,
+  .why-hire {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .back-cont {
+    width: 140px;
+    height: 160px;
+    border-radius: 30px;
+  }
+
+  .back-cont img {
+    border-radius: 30px;
+  }
+
+  .projects .top h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects .top button {
+    padding: 5px 11px;
+    font-size: 0.6rem;
+  }
+
+  .projects .top button {
+    padding: 10px 15px;
+  }
+
+  .connect {
+    padding: 0px;
+  }
+
+  .connect h2 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
+  .connect-input {
+    width: 60%;
+    min-width: 310px;
+    margin-bottom: 37px;
+    padding: 3px;
+  }
+
+  .connect-input .mail-icon {
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
+  .connect-input input {
+    padding: 3px 6px;
+    font-size: 0.5rem;
+  }
+
+  .connect-input button {
+    padding: 5px 12px;
+    font-size: 0.6rem;
+  }
+
+  .moving-label label {
+    padding: 10px 20px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+  footer .top h2 {
+    font-size: 1.5rem;
+  }
+  footer .top a {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+  footer .line {
+    margin: 15px 0;
+  }
+
+  footer .details {
+    margin-top: 1rem;
+    padding-top: 10px;
+  }
+  footer .navs,
+  footer .contact {
+    font-size: 0.55rem;
+    gap: 10px;
+  }
+  .details .social a {
+    font-size: 0.75rem;
+  }
+
+  .social p {
+    font-size: 0.55rem;
+  }
+  .moving-label{
+    height: 90px;
+  }
+  .moving-label label {
+    transform: rotate(-7deg);
+    top: 25%;
+  }
 }
