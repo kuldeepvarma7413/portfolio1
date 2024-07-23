@@ -9,7 +9,7 @@
     user-select: none;
 }
 
-root{
+#root{
     overflow: hidden;
 }
 

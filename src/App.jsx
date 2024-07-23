@@ -189,16 +189,16 @@ function App() {
           </h2>
           <ul>
             <li>
-              Over 10 successful projects completed in web and mobile
+              Over 10+ successful projects completed in web and mobile
               development.
             </li>
             <li>
               Proficient in full-stack development, specializing in React,
-              Node.js, and Flutter.
+              Node.js & Android.
             </li>
             <li>
               Strong problem-solving skills with a proven track record in
-              hackathons.
+              practice platforms.
             </li>
             <li>Excellent collaboration and communication abilities.</li>
             <li>
@@ -340,6 +340,7 @@ function App() {
             id="email"
             type="email"
             placeholder="Enter your email"
+            required
           />
           <input
             name="Name"

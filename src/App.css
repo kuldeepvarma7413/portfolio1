@@ -1239,11 +1239,321 @@ footer .navs a {
   .social p {
     font-size: 0.55rem;
   }
-  .moving-label{
+  .moving-label {
     height: 90px;
   }
   .moving-label label {
     transform: rotate(-7deg);
     top: 25%;
   }
+}
+
+/* mobile */
+@media screen and (min-width: 320px) and (max-width: 519px) {
+  header a {
+    padding: 2px 5px;
+    font-size: 0.4rem;
+  }
+
+  header .logo {
+    width: fit-content;
+    margin: 0;
+  }
+
+  header .logo img {
+    width: 10px !important;
+  }
+
+  .logo .logo-text,
+  .logo .logo-text span {
+    font-size: 0.4rem;
+  }
+
+  header {
+    gap: 2px;
+    margin: 10px auto;
+  }
+
+  .details .greet {
+    font-size: 1rem;
+  }
+
+  .details .greet img {
+    width: 15px;
+    top: -11px;
+    right: -15px;
+  }
+
+  .details h1 {
+    font-size: 1.5rem;
+  }
+
+  .details .data img {
+    width: 25px;
+    bottom: -19px;
+    left: -23px;
+  }
+
+  .intro {
+    margin-top: 0.5px;
+    height: 350px;
+  }
+
+  .intro-about {
+    margin: 0px 5%;
+    margin-top: 2rem;
+  }
+
+  .intro-about .quote {
+    width: 40%;
+    font-size: 0.5rem;
+  }
+
+  .intro-about .experience {
+    width: 40%;
+    font-size: 0.5rem;
+  }
+
+  .intro-about .experience .star {
+    width: 15px;
+    height: 15px;
+  }
+
+  .experience h2 {
+    font-size: 0.55rem;
+  }
+  .experience p {
+    font-size: 0.4rem;
+  }
+
+  .image-area::before {
+    width: 250px;
+    height: 250px;
+    bottom: -125px;
+  }
+
+  .image-area .photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-area .CV-links a {
+    font-size: 0.5rem;
+    padding: 3px 5px;
+  }
+
+  .image-area .CV-links {
+    padding: 3px;
+  }
+
+  .service {
+    padding: 0px 10px;
+    border-radius: 13px;
+  }
+
+  .service img.background {
+    border-radius: 13px;
+  }
+
+  .service .top-content {
+    margin-top: 20px;
+  }
+
+  .service .top-content h2 {
+    font-size: 1rem;
+  }
+  .service .top-content p {
+    width: 50%;
+    font-size: 0.5rem;
+  }
+
+  .stone1,
+  .stone3 {
+    width: 100px;
+  }
+
+  .stone2 {
+    width: 100px;
+  }
+
+  .service .services {
+    padding: 30px 0;
+  }
+
+  .connect {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 13px;
+  }
+
+  .connect h2 {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .connect-input {
+    gap: 2px;
+    width: 70%;
+    padding: 2px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .connect-input .mail-icon {
+    padding: 3px;
+    font-size: 1rem;
+  }
+
+  .connect-input input {
+    padding: 2px;
+    font-size: 0.5rem;
+  }
+
+  .connect-input button {
+    padding: 3px 10px;
+    font-size: 0.55rem;
+  }
+
+  footer {
+    border-radius: 13px 13px 0 0;
+    padding: 10px;
+    font-size: 0.4rem;
+  }
+  footer .navs,
+  footer .contact {
+    gap: 5px;
+  }
+  .details .social a {
+    font-size: 0.55rem;
+  }
+
+  footer .line {
+    margin: 10px 0px 5px;
+  }
+  footer .details {
+    margin: 0px;
+    padding-top: 5px;
+  }
+
+  footer .top h2 {
+    font-size: 1rem;
+  }
+  footer .top a {
+    padding: 3px 10px;
+    font-size: 0.55rem;
+  }
+
+  .experience .content {
+    margin: 5px 10px;
+    margin-top: 15px;
+  }
+  .experience .content h2 {
+    font-size: 1rem;
+  }
+
+  .exp-details {
+    margin-top: 0px;
+  }
+  .companies .company,
+  .companies .role,
+  .dotes .dot {
+    margin: 10px 0px;
+  }
+  .companies .company h2,
+  .companies .role h2 {
+    font-size: 0.55rem;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .companies .company p,
+  .companies .role p {
+    font-size: 0.4rem;
+  }
+  .dot-outer {
+    width: 10px;
+    height: 10px;
+    padding: 0.8px;
+    border: 1px dotted #344054;
+  }
+
+  .why-hire {
+    margin-top: 20px;
+    padding: 10px 5px;
+    border-radius: 13px;
+  }
+
+  .back-cont {
+    width: 90px;
+    height: 110px;
+    border-radius: 13px;
+  }
+  .back-cont img {
+    border-radius: 13px;
+  }
+
+  .hire-left {
+    width: 40%;
+  }
+
+  .hire-right {
+    width: 60%;
+    padding-left: 10px;
+  }
+
+  .hire-right h2 {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hire-right li {
+    font-size: 0.5rem;
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  .hire-me-btn {
+    padding: 3px 5px;
+    border-radius: 1.5rem;
+    font-size: 0.5rem;
+  }
+
+  .projects {
+    border-radius: 13px;
+    padding: 10px 5px;
+    margin-top: 10px;
+  }
+  .projects .top h2 {
+    font-size: 1rem;
+}
+.projects .top button {
+  padding: 3px 5px;
+  font-size: .5rem;
+}
+
+.all-project{
+  margin-top: 10px;
+}
+
+.moving-label {
+  background-color: #fb6514;
+  height: 40px;
+  width: 100%;
+  position: relative;
+  border-radius: 13px 0 13px 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.moving-label label {
+  padding: 2px 10px;
+  font-size: .55rem;
+  gap: 20px;
+  transform: rotate(-5.7deg);
+  top: 25%;
+}
+.gemini {
+  font-size: .55rem;
+}
+
+.moving-label label {
+  width: 200%;
+}
 }
