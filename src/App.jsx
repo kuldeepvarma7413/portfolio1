@@ -2,24 +2,25 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import "./App.css";
-import catVector from "./assets/cat_vector.png";
-import kuldeepImg from "./assets/kuldeep.png";
-import background from "./assets/background.jpg";
-import stone1 from "./assets/stone1.png";
-import stone2 from "./assets/stone2.png";
-import stone3 from "./assets/stone3.png";
-import medicWorld from "./assets/medic_world.png";
-import studysync from "./assets/studysync.png";
-import projectManager from "./assets/project_manager.png";
+import catVector from "./assets/cat_vector.webp";
+import kuldeepImg from "./assets/kuldeep.webp";
+import background from "./assets/background.webp";
+import stone1 from "./assets/stone1.webp";
+import stone2 from "./assets/stone2.webp";
+import stone3 from "./assets/stone3.webp";
+import medicWorld from "./assets/medic_world.webp";
+import studysync from "./assets/studysync.webp";
+import projectManager from "./assets/project_manager.webp";
 import ServiceCard from "./components/ServiceCard";
 import ProjectCard from "./components/ProjectCard";
-import StudySyncAndroid from "./assets/studysync_android.png";
-import BMICalculator from "./assets/bmi_calculator.png";
+import StudySyncAndroid from "./assets/studysync_android.webp";
+import BMICalculator from "./assets/bmi_calculator.webp";
 import HireMe from "./assets/hire_me-min.webp";
-import fullStack from "./assets/full_stack.jpg";
+import fullStack from "./assets/full_stack.webp";
 import android from "./assets/android.webp";
-import api from "./assets/api.png";
-import logo from "./assets/logo.png";
+import api from "./assets/api.webp";
+import logo from "./assets/logo.webp";
+import AuthSystem from "./assets/auth_system.webp";
 import { IoMailOpen } from "react-icons/io5";
 import { SiGooglegemini } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
@@ -221,6 +222,12 @@ function App() {
           <button>See All</button>
         </div>
         <div className="all-project">
+        <ProjectCard
+            title="Authentication System"
+            description="Developed an authentication system with local and Google OAuth, email verification, and JWT-based security. Includes user status management for secure interactions."
+            image={AuthSystem}
+            githubLink="https://github.com/kuldeepvarma7413/Authentication-using-MERN"
+          />
           <ProjectCard
             title="StudySync"
             description="StudySync is your ultimate academic companion, designed to simplify note-taking and collaboration. With its powerful search capabilities, compiler-driven functionalities, and seamless integration with MongoDB and Cloudinary, it revolutionizes how students manage and share study materials."
