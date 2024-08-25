@@ -447,7 +447,7 @@ function App() {
         </div>
         <p className="line"></p>
         {/* details */}
-        <div className="details"  data-aos="fade-up">
+        <div className="details">
           <div className="social">
             <p>
               Passionate web developer skilled in C++, Python, JavaScript,
