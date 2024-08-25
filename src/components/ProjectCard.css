@@ -71,15 +71,18 @@
   transition-timing-function: ease-in-out;
 }
 
-.project-card:hover .description {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .project-card .description {
   opacity: 0;
   transform: translateY(10px);
+  transition: 0.6s;
+}
+
+.project-card:hover .description {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s;
 }
 
 .project-card:hover .arrow {

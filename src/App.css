@@ -88,6 +88,7 @@ header .logo span {
 
 .details .data {
   position: relative;
+  min-height: 150px;
 }
 
 .details .data img {

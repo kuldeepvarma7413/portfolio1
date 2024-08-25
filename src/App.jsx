@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useTypewriter } from "react-simple-typewriter";
 import "./App.css";
 import catVector from "./assets/cat_vector.webp";
 import kuldeepImg from "./assets/kuldeep.webp";
@@ -52,10 +55,24 @@ function App() {
     });
   });
 
+  // aos
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
+  const [SpecializationText] = useTypewriter({
+    words: ["Full Stack Developer", "Android Developer"],
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
+
   return (
     <>
       {/* header */}
-      <header>
+      <header data-aos="fade-up">
         <Link activeClass="active" smooth spy to="home">
           Home
         </Link>
@@ -66,12 +83,18 @@ function App() {
           Service
         </Link>
         <div className="logo">
-          <img src={logo} alt="logo" style={{ width: "45px" }} />
+          <img
+            src={logo}
+            alt="logo"
+            style={{ width: "45px" }}
+            loading="lazy"
+            decoding="async"
+          />
           <p className="logo-text">PORTFOLIO</p>
         </div>
-        <Link activeClass="active" smooth spy to="resume">
+        <a activeClass="active" href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" download >
           Resume
-        </Link>
+        </a>
         <Link activeClass="active" smooth spy to="education">
           Education
         </Link>
@@ -82,24 +105,34 @@ function App() {
 
       {/* content section */}
       {/* intro */}
-      <div className="intro">
+      <div className="intro" data-aos="fade-up">
         <section id="home" className="details">
           <p className="greet">
             Hello!
-            <img src={catVector} alt="cat-vector" />
+            <img
+              src={catVector}
+              alt="cat-vector"
+              loading="lazy"
+              decoding="async"
+            />
           </p>
           <h1 className="data">
             I'm <span>Kuldeep</span>,<br />
-            Full Stack Developer
-            <img src={catVector} alt="cat-vector" />
+            {SpecializationText}
+            <img
+              src={catVector}
+              alt="cat-vector"
+              loading="lazy"
+              decoding="async"
+            />
           </h1>
         </section>
-        <section className="intro-about">
+        <section className="intro-about" data-aos="fade-up">
           <p className="quote">
             "A Full Stack Developer with a passion for creating innovative
             solutions"
           </p>
-          <div className="experience">
+          <div className="experience" data-aos="fade-up">
             {/* stars */}
             <div className="stars">
               <div className="star"></div>
@@ -114,12 +147,19 @@ function App() {
         </section>
         <section className="image-area">
           {/* image */}
-          <img className="photo" src={kuldeepImg} alt="" />
-          {/* portfolio and hire me */}
+          <img
+            className="photo"
+            src={kuldeepImg}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            data-aos="fade-up"
+          />
+          {/* portfolio and contact */}
           <div className="CV-links">
-            <NavLink to={"#"} className={"selected"}>
+            <a href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" className={"selected"} download>
               Portfolio
-            </NavLink>
+            </a>
             <Link activeClass="active" smooth spy to="contact">
               Contact
             </Link>
@@ -127,12 +167,36 @@ function App() {
         </section>
       </div>
       {/* services section */}
-      <div className="service" id="service">
-        <img src={background} className="background" alt="background-image" />
-        <img src={stone1} alt="stone1" className="stone1 stone" />
-        <img src={stone2} alt="stone2" className="stone2 stone" />
-        <img src={stone3} alt="stone3" className="stone3 stone" />
-        <div className="top-content">
+      <div className="service" id="service" data-aos="fade-up">
+        <img
+          src={background}
+          className="background"
+          alt="background-image"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={stone1}
+          alt="stone1"
+          className="stone1 stone"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={stone2}
+          alt="stone2"
+          className="stone2 stone"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={stone3}
+          alt="stone3"
+          className="stone3 stone"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="top-content" data-aos="fade-up">
           <h2>
             My <span className="d-orange">Sevices</span>
           </h2>
@@ -149,13 +213,13 @@ function App() {
         </div>
       </div>
       {/* work experience */}
-      <div className="experience" id="resume">
+      <div className="experience" id="resume" data-aos="fade-up">
         <section className="content">
           <h2>
             My <span className="d-orange">Work Experience</span>
           </h2>
           <div className="exp-details">
-            <div className="companies">
+            <div className="companies" data-aos="fade-up">
               <div className="company school">
                 <h2>EVE Health Centers, Gurgaon</h2>
                 <p>Jun 2023- August 2023</p>
@@ -178,51 +242,51 @@ function App() {
       </div>
       {/* education experience */}
       {/* why hire */}
-      <div className="why-hire">
+      <div className="why-hire" data-aos="fade-up">
         <div className="hire-left">
           <div className="back-cont">
-            <img src={HireMe} alt="" />
+            <img src={HireMe} alt="" loading="lazy" decoding="async" data-aos="fade-up" />
           </div>
         </div>
         <div className="hire-right">
-          <h2>
+          <h2 data-aos="fade-up">
             Why <span className="d-orange">Hire me</span>?
           </h2>
           <ul>
-            <li>
+            <li data-aos="fade-up">
               Over 10+ successful projects completed in web and mobile
               development.
             </li>
-            <li>
+            <li data-aos="fade-up">
               Proficient in full-stack development, specializing in React,
               Node.js & Android.
             </li>
-            <li>
+            <li data-aos="fade-up">
               Strong problem-solving skills with a proven track record in
               practice platforms.
             </li>
-            <li>Excellent collaboration and communication abilities.</li>
-            <li>
+            <li data-aos="fade-up">Excellent collaboration and communication abilities.</li>
+            <li data-aos="fade-up">
               Dedicated to delivering high-quality, user-centric solutions.
             </li>
           </ul>
-          <a className="hire-me-btn" href="mailto:kuldeepvarma7413@gmail.com">
+          <a className="hire-me-btn" href="mailto:kuldeepvarma7413@gmail.com" data-aos="fade-up">
             Hire me
           </a>
         </div>
       </div>
       {/* projects */}
-      <div className="projects" id="project">
+      <div className="projects" id="project" data-aos="fade-up">
         <div className="top">
           <h2>
             Let's have a look at
             <br />
             my <span className="d-orange">Projects</span>
           </h2>
-          <button>See All</button>
+          <button>See All Below</button>
         </div>
         <div className="all-project">
-        <ProjectCard
+          <ProjectCard
             title="Authentication System"
             description="Developed an authentication system with local and Google OAuth, email verification, and JWT-based security. Includes user status management for secure interactions."
             image={AuthSystem}
@@ -237,7 +301,7 @@ function App() {
           />
           <ProjectCard
             title="Project Manager"
-            description="The Pharmacy Management is a project developed to enhance the efficiency, accuracy, and security of pharmacy operations. It features user roles for administrators and chemists, facilitating tasks like adding and managing medicines, generating bills, and maintaining user profiles using Java and Swing components."
+            description="A Project Management Application enabling teams to plan, track, and collaborate on tasks. Features include task assignments, progress monitoring, and deadline management, enhancing efficiency and project delivery."
             image={projectManager}
             githubLink={"https://github.com/kuldeepvarma7413/project_manager"}
           />
@@ -262,7 +326,7 @@ function App() {
         </div>
       </div>
       {/* moving label */}
-      <div className="moving-label">
+      <div className="moving-label" data-aos="fade-up">
         <label className="label1">
           Android Apps <SiGooglegemini className="gemini" /> Web Apps{" "}
           <SiGooglegemini className="gemini" /> UI/UX{" "}
@@ -275,13 +339,13 @@ function App() {
         </label>
       </div>
       {/* work experience */}
-      <div className="experience" id="education">
+      <div className="experience" id="education" data-aos="fade-up">
         <section className="content">
           <h2>
             My <span className="d-orange">Education</span>
           </h2>
           <div className="exp-details">
-            <div className="companies">
+            <div className="companies" data-aos="fade-up">
               <div className="company school">
                 <h2>Lovely Professional University</h2>
                 <p>Jalandhar, Punjab | Aug 2021 - May 2025</p>
@@ -296,7 +360,7 @@ function App() {
                 <p>Specialization: Full Stack, Android | CGPA: 8.12</p>
               </div>
             </div>
-            <div className="companies">
+            <div className="companies" data-aos="fade-up">
               <div className="company school">
                 <h2>G.B.S. School, Jaswantpura</h2>
                 <p>Churu, Rajasthan | Jul 2019 - May 2020</p>
@@ -311,7 +375,7 @@ function App() {
                 <p>Specialization: Physics, Chemistry, Maths | Result: 71%</p>
               </div>
             </div>
-            <div className="companies">
+            <div className="companies" data-aos="fade-up">
               <div className="company school">
                 <h2>G.B.S. School, Jaswantpura</h2>
                 <p>Churu, Rajasthan | Jul 2017 - May 2018</p>
@@ -330,7 +394,7 @@ function App() {
         </section>
       </div>
       {/* have an awesome idea */}
-      <div className="connect">
+      <div className="connect" data-aos="fade-up">
         <h2>
           Have an Awesome Project Idea?{" "}
           <span className="d-orange">Let's Discuss</span>
@@ -340,6 +404,7 @@ function App() {
           method="post"
           acceptCharset="UTF-8"
           className="connect-input"
+          data-aos="fade-up"
         >
           <IoMailOpen className="mail-icon" />
           <input
@@ -373,7 +438,7 @@ function App() {
         </form>
       </div>
       {/* footer */}
-      <footer>
+      <footer data-aos="fade-up">
         <div className="top">
           <h2>Let's Connect there</h2>
           <a href="https://www.linkedin.com/in/kul-deep-varma-4150bb225/">
@@ -382,7 +447,7 @@ function App() {
         </div>
         <p className="line"></p>
         {/* details */}
-        <div className="details">
+        <div className="details"  data-aos="fade-up">
           <div className="social">
             <p>
               Passionate web developer skilled in C++, Python, JavaScript,
