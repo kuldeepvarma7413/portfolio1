@@ -92,7 +92,7 @@ function App() {
           />
           <p className="logo-text">PORTFOLIO</p>
         </div>
-        <a activeClass="active" href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" download >
+        <a activeClass="active" target="_blank" href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" download >
           Resume
         </a>
         <Link activeClass="active" smooth spy to="education">
@@ -157,7 +157,7 @@ function App() {
           />
           {/* portfolio and contact */}
           <div className="CV-links">
-            <a href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" className={"selected"} download>
+            <a target="_blank" href="https://docs.google.com/document/d/1UsMM3rHAYsDpERMVqKndmOm4nqhIT5pP/edit?usp=sharing&ouid=106745857030630442931&rtpof=true&sd=true" className={"selected"} download>
               Portfolio
             </a>
             <Link activeClass="active" smooth spy to="contact">
@@ -219,18 +219,51 @@ function App() {
             My <span className="d-orange">Work Experience</span>
           </h2>
           <div className="exp-details">
+            {/* Jupiter */}
+            <div className="companies" data-aos="fade-up">
+              <div className="company school">
+                <h2>Jupiter Money</h2>
+                <p>Dec 2024- Present</p>
+              </div>
+              <div className="dots company-logo back-line">
+                <img src="https://jupiter.money/assets/images/header-white.svg?v=7e86edc062" />
+              </div>
+              <div className="role stream">
+                <h2>Software Development Engineer Intern</h2>
+                <p>
+                  Developing Innovative solutions for KYC services.
+                  Visit <a href="https://jupiter.money/" target="_blank">here</a>
+                </p>
+              </div>
+            </div>
+            {/* Freelancing */}
+            <div className="companies" data-aos="fade-up">
+              <div className="company school">
+                <h2>Freelancing</h2>
+                <p>Jun 2024- Present</p>
+              </div>
+              <div className="dots company-logo back-line">
+                <img src="https://www.thehomedaze.com/assets/logo-CsMRlrIM.webp" />
+              </div>
+              <div className="role stream">
+                <h2>Developer/Freeelancer</h2>
+                <p>
+                  Developed TheHomeDaze - Rental property listing website.
+                  Visit <a href="https://www.thehomedaze.com" target="_blank">here</a>
+                </p>
+              </div>
+            </div>
+            {/* EVE Internship */}
             <div className="companies" data-aos="fade-up">
               <div className="company school">
                 <h2>EVE Health Centers, Gurgaon</h2>
                 <p>Jun 2023- August 2023</p>
               </div>
-              <div className="dots">
-                <span className="dot-outer">
-                  <p className="dot red"></p>
-                </span>
+              <div className="dots company-logo">
+                <img src="https://eve-production.s3.amazonaws.com/static/images/eve%20logo.png"/>
               </div>
               <div className="role stream">
-                <h2>Front-end Intern</h2>
+                <h2>Frontend Development Intern</h2>
                 <p>
                   Designed user-friendly interfaces, resolved bugs, and
                   optimized web pages using HTML, CSS, JavaScript, and jQuery.
