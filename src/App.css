@@ -377,6 +377,7 @@ header .logo span {
   height: fit-content;
   width: fit-content;
   max-width: 100px;
+  max-height: 50px;
   padding: 5px;
   border-radius: 10px;
   object-fit: cover;
@@ -955,6 +956,7 @@ footer .navs a {
 
   .company-logo img {
     max-width: 70px;
+    max-height: 40px;
   }
 
   .hire-right {
@@ -1099,6 +1101,7 @@ footer .navs a {
 
   .company-logo img {
     max-width: 55px;
+    max-height: 30px;
   }
 
   .service {
@@ -1389,6 +1392,7 @@ footer .navs a {
 
   .company-logo img {
     max-width: 40px;
+    max-height: 20px;
   }
 
   .image-area::before {
